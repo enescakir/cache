@@ -4009,6 +4009,11 @@ function uploadCacheArchiveSDK(signedUploadURL, archivePath, options) {
         }
         catch (error) {
             core.warning(`uploadCacheArchiveSDK: internal error uploading cache archive: ${error.message}`);
+            core.warning(`uploadCacheArchiveSDK: internal error uploading cache archive: ${error.code}`);
+            core.warning(`uploadCacheArchiveSDK: internal error uploading cache archive: ${error.statusCode}`);
+            core.warning(`uploadCacheArchiveSDK: internal error uploading cache archive: ${error.request}`);
+            core.warning(`uploadCacheArchiveSDK: internal error uploading cache archive: ${error.response}`);
+            core.warning(`uploadCacheArchiveSDK: internal error uploading cache archive: ${error}`);
             throw error;
         }
         finally {
